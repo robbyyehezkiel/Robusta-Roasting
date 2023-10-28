@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/option_item_selected_bg"
+    android:layout_marginHorizontal="4dp"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/resultLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:gravity="center"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="title output" />
+
+    <ProgressBar
+        android:id="@+id/resultProgress"
+        style="@style/CircularDeterminateProgressBar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:progress="60"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultLabel"
+        tools:progress="60" />
+
+    <TextView
+        android:id="@+id/resultPercentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/resultProgress"
+        app:layout_constraintEnd_toEndOf="@+id/resultProgress"
+        app:layout_constraintStart_toStartOf="@+id/resultProgress"
+        app:layout_constraintTop_toBottomOf="@+id/resultLabel"
+        tools:text="40%" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/standard_padding"
+        tools:context=".ui.menu.coffee.DetailCoffeeActivity">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/roastPhoto"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/icon_add_photo"
+            app:civ_border_width="2dp"
+            app:layout_constraintEnd_toStartOf="@+id/linearLayout3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/roastPhoto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/roastPhoto"
+            app:layout_constraintTop_toTopOf="@+id/roastPhoto">
+
+            <TextView
+                android:id="@+id/roastTitle"
+                style="@style/Title1"
+                android:layout_gravity="center"
+                android:text="@string/tools_null_data"
+                tools:text="@string/tools_roast" />
+
+            <TextView
+                android:id="@+id/roastTemperature"
+                style="@style/Title2"
+                android:layout_marginTop="3dp"
+                android:text="@string/Temperature" />
+        </LinearLayout>
+
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/roastDescriptionTitle"
+            style="@style/HeadlineText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/tools_description"
+            app:layout_constraintTop_toBottomOf="@+id/roastPhoto" />
+
+        <TextView
+            android:id="@+id/roastDescription"
+            style="@style/BodyText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tools_null_data"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/roastDescriptionTitle"
+            tools:text="@string/tools_lorem_ipsum" />
+
+        <!-- Expandable Section -->
+        <LinearLayout
+            android:id="@+id/expandableColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/expandable_outline"
+            android:orientation="vertical"
+            android:padding="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/roastDescription">
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/roastColorTitle"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="12dp"
+                android:text="@string/Color"
+                app:drawableEndCompat="@drawable/icon_expand_more" />
+
+            <View
+                android:id="@+id/colorSeparatorLine"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/divider"
+                android:visibility="gone" />
+
+            <!-- Description -->
+            <TextView
+                android:id="@+id/roastColor"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- Expandable Section -->
+        <LinearLayout
+            android:id="@+id/expandableAroma"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/expandable_outline"
+            android:orientation="vertical"
+            android:padding="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/expandableColor">
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/roastAromaTitle"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="12dp"
+                android:text="@string/Aroma"
+                app:drawableEndCompat="@drawable/icon_expand_more" />
+
+            <View
+                android:id="@+id/aromaSeparatorLine"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/divider"
+                android:visibility="gone" />
+
+            <!-- Description -->
+            <TextView
+                android:id="@+id/roastAroma"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- Expandable Section -->
+        <LinearLayout
+            android:id="@+id/expandableFlavour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/expandable_outline"
+            android:orientation="vertical"
+            android:padding="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/expandableAroma">
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/roastFlavourTitle"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="12dp"
+                android:text="@string/Flavour"
+                app:drawableEndCompat="@drawable/icon_expand_more" />
+
+            <View
+                android:id="@+id/flavourSeparatorLine"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/divider"
+                android:visibility="gone" />
+
+            <!-- Description -->
+            <TextView
+                android:id="@+id/roastFlavour"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

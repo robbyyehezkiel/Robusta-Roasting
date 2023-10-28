@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ui.main.MainActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/buttonScan"
+        style="@style/MenuMaterialCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/menuTitleTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/ed_image"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:contentDescription="@string/tools_description"
+                android:scaleType="center"
+                android:src="@drawable/image_widget"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <TextView
+                android:id="@+id/ed_quiz"
+                style="@style/HeadlineText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/card_scan_coffee_bean"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ed_image" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/tools_description"
+                android:src="@drawable/icon_scan"
+                app:layout_constraintBottom_toBottomOf="@+id/ed_quiz"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/ed_quiz"
+                app:layout_constraintTop_toTopOf="@+id/ed_quiz" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/buttonScan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Title TextView -->
+        <TextView
+            android:id="@+id/originTitleTextView"
+            style="@style/LargeTitleText"
+            android:text="@string/app_name" />
+
+        <!-- Subtitle TextView -->
+        <TextView
+            android:id="@+id/subtitleTextView"
+            style="@style/Title3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_description" />
+    </LinearLayout>
+
+    <!-- Menu Title TextView -->
+    <TextView
+        android:id="@+id/menuTitleTextView"
+        style="@style/TextAppearance.MaterialComponents.Headline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/title_menu"
+        app:layout_constraintBottom_toTopOf="@+id/menuRecyclerView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Menu RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/menuRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/coffeeTitleTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:itemCount="1"
+        tools:listitem="@layout/item_list_menu" />
+
+    <!-- Roast Title TextView -->
+    <TextView
+        android:id="@+id/coffeeTitleTextView"
+        style="@style/TextAppearance.MaterialComponents.Headline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/title_coffee_bean"
+        app:layout_constraintBottom_toTopOf="@+id/roastRecyclerView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Roast RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/roastRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:itemCount="3"
+        tools:listitem="@layout/item_list_roast" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

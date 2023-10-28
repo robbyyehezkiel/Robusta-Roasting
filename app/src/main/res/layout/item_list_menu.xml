@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MenuMaterialCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="4dp"
+    android:layout_marginBottom="8dp">
+
+    <TextView
+        android:id="@+id/menuTitle"
+        style="@style/BodyText"
+        android:padding="8dp"
+        android:layout_gravity="center"
+        android:text="@string/tools_description"
+        app:drawableTopCompat="@drawable/icon_settings" />
+
+</com.google.android.material.card.MaterialCardView>

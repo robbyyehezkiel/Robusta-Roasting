@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ed_list_roast"
+    style="@style/MenuMaterialCard"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_marginBottom="8dp"
+    android:padding="16dp"
+    app:layout_constraintBottom_toTopOf="@+id/rv_main_coffee_bean"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/ed_list_roast_photo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/image_logo" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ed_list_roast_title"
+                style="@style/HeadlineText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/coffee_bean_medium" />
+
+            <TextView
+                android:id="@+id/ed_list_roast_temperature"
+                style="@style/BodyText"
+                android:text="@string/title_coffee_bean" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginEnd="16dp"
+        android:background="@color/frame2"
+        android:contentDescription="@string/tools_description"
+        android:padding="6dp"
+        android:src="@drawable/icon_eye" />
+
+</com.google.android.material.card.MaterialCardView>

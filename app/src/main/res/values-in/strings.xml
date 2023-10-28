@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--  App  -->
+    <string name="app_name">Robusta Roasting</string>
+    <string name="app_description">Deteksi Kematangan Biji Kopi Robusta</string>
+
+    <!--  Main Page  -->
+    <string name="card_scan_coffee_bean">DETEKSI BIJI KOPI</string>
+    <string name="title_menu">Menu</string>
+    <string name="menu_coffee_name">Robusta</string>
+    <string name="menu_quiz">Kuis</string>
+    <string name="menu_app_info">Info Aplikasi</string>
+    <string name="menu_settings">Pengaturan</string>
+    <string name="title_coffee_bean">Biji Kopi Robusta</string>
+    <string name="coffee_bean_light">Biji Terang</string>
+    <string name="coffee_bean_medium">Biji Medium</string>
+    <string name="coffee_bean_dark">Biji Gelap</string>
+
+    <!--  Detection Page  -->
+    <string name="toolbar_detection">Deteksi Biji Kopi</string>
+    <string name="title_method">Deteksi Objek</string>
+    <string name="method_camera">Kamera</string>
+    <string name="method_gallery">Galeri</string>
+    <string name="button_upload">Unggah foto</string>
+    <string name="button_detail_result">Detail Hasil</string>
+
+    <!--  Result Pop Up  -->
+    <string name="title_light">Terang</string>
+    <string name="title_medium">Medium</string>
+    <string name="title_dark">Gelap</string>
+
+    <!--  About Coffee Page  -->
+    <string name="toolbar_detail_coffee">Detail Kopi</string>
+    <string name="tools_coffee">Kopi Robusta</string>
+    <string name="tools_coffee_description">Kopi Robusta, yang dikenal secara ilmiah sebagai Coffea canephora, adalah salah satu dari dua spesies utama biji kopi yang mendominasi pasar kopi global, yang lainnya adalah Arabika (Coffea arabica). Kopi Robusta terkenal karena sifatnya yang tangguh, profil rasa yang kuat, dan adaptabilitasnya yang luar biasa terhadap berbagai kondisi pertumbuhan yang beragam. Dalam esai ini, kita akan menyelami dunia Kopi Robusta, menjelajahi asal-usulnya, budidayanya, karakteristik khasnya, dan peran signifikan dalam industri kopi.</string>
+
+    <!--  App Info Page  -->
+    <string name="toolbar_about_app">Tentang Aplikasi</string>
+    <string name="tools_app_description">Aplikasi ini merupakan sebuah hasil pengembangan teknologi yang dirancang khusus untuk mengukur dan mendeteksi tingkat kematangan hasil roasting biji kopi jenis robusta. Aplikasi ini memungkinkan pemanggang kopi untuk secara real-time memantau tingkat kematangan biji kopi yang sedang diroasting. Ini dilakukan dengan mendeteksi citra dari objek  yang terintegrasi dalam model <i><b>Convolutional Neural Network</b></i> (CNN) untuk dapat menentukan profile roasting (light, medium, dark). Pada aplikasi ini, pengguna juga dapat melihat informasi tambahan terkait kopi robusta dan data profil roasting biji kopi robusta.</string>
+
+    <!--  Setting Page  -->
+    <string name="toolbar_settings">Pengaturan</string>
+    <string name="tools_language">Ganti Bahasa</string>
+    <string name="tools_permission">Berikan perizinan aplikasi</string>
+    <string name="tools_copyright">\u00A9 Copyright</string>
+    <string name="tools_university">Universitas Jambi</string>
+
+    <!--  Roasting Page  -->
+    <string name="toolbar_detail_roast">Detail Kematangan</string>
+    <string name="tools_roast">Kematangan</string>
+    <string name="Temperature">Temperatur</string>
+    <string name="Color">Warna</string>
+    <string name="Aroma">Aroma</string>
+    <string name="Flavour">Rasa</string>
+
+    <!-- Kematangan Terang -->
+    <string name="light_description">Kopi Robusta kematangan terang adalah minuman istimewa yang dikenal dengan karakteristik unik dan segarnya. Ditanam terutama di daerah beriklim tropis, variasi kopi ini terkenal dengan rasa berani dan bumi. Proses pemanggangan terang menjaga sifat khas biji robusta, menghasilkan cangkir yang memiliki keasaman yang menyenangkan, tubuh sedang yang lembut di lidah, dan nuansa menarik dari biji-bijian dan biji kematangan. Dengan kandungan kafein yang lebih tinggi dibandingkan biji arabika, kopi robusta kematangan terang menawarkan pengalaman yang energetis dan tangguh, menjadikannya pilihan ideal bagi mereka yang mencari kenikmatan pagi yang penuh semangat dan berisi.</string>
+    <string name="light_temperature">180°C hingga 205°C</string>
+    <string name="light_color">Biji kopi robusta kematangan terang memiliki warna pucat seperti jerami dengan sentuhan cokelat muda. Permukaannya tampak kering, dan ada sedikit ketidakrataan warna di permukaan, dengan area cokelat muda dan sentuhan kuning yang halus. Biji-bijian masih mempertahankan kelembaban asli mereka, dan minyak di permukaannya sangat sedikit. Keseluruhan kesan adalah kesegaran dan kejernihan, menunjukkan kematangan yang mempertahankan rasa dan keasaman asli biji kopi.</string>
+    <string name="light_flavour">Biji kopi robusta kematangan terang menawarkan pengalaman yang halus dan nuansa. Rasa khas biji-bijian muncul, menampilkan keasaman yang hidup dan nuansa buah atau bunga. Rasanya sering cerah dan tajam, dengan keasaman yang mencolok yang mungkin mengingatkan Anda pada jeruk atau buah beri. Sentuhan rasa biji-bijian kematangan, biji, dan kealamian halus juga dapat terdeteksi. Keseluruhan kesan adalah kehalusan, yang menyoroti karakteristik unik asal biji kopi.</string>
+    <string name="light_aroma">Biji kopi robusta kematangan terang memiliki aroma yang harum dan halus. Bau sering cerah dan hidup, dengan catatan bunga dan buah yang menonjol yang membawa gambaran bunga segar dan buah matang. Aroma juga mungkin membawa sentuhan biji-bijian atau biji kematangan, menambah kedalaman pada pengalaman indra. Ada perasaan kecerahan dan kejelasan dalam aroma, mencerminkan asal biji kopi dan mempertahankan esensi alami kopi.</string>
+
+    <!-- Kematangan Medium -->
+    <string name="medium_description">Kopi Robusta kematangan medium menyajikan harmoni rasa dan aroma yang memikat, menampilkan potensi kaya biji robusta. Ditanam terutama di daerah beriklim tropis, variasi kopi ini terkenal dengan sifat tangguhnya. Melalui proses pemanggangan medium yang cermat, biji-bijian mengungkap profil yang seimbang yang ditandai oleh keasaman yang moderat namun hidup, tubuh yang berlimpah yang melapisi lidah dengan halus, dan perpaduan menarik dari nuansa biji dengan sentuhan cokelat dan kealamian. Menjaga keseimbangan antara sifat tangguh biji dan efek transformasi pemanggangan, kopi robusta kematangan medium memberikan pengalaman yang memuaskan dan membangkitkan semangat, menjadikannya pilihan yang sangat baik bagi pecinta kopi yang menginginkan kedalaman dan semangat dalam cangkir mereka.</string>
+    <string name="medium_temperature">210°C hingga 220°C</string>
+    <string name="medium_color">Masuk ke wilayah kematangan medium, biji kopi robusta mengambil nuansa cokelat yang lebih dalam, menyerupai cokelat kaya atau warna kenari hangat. Biji-bijian menjadi lebih halus di tekstur karena minyak mulai muncul dan menyebar di permukaan. Minyak-minyak ini memberikan kilap terang pada biji-bijian, memantulkan cahaya dengan cara yang lembut. Biji-bijian mungkin menampilkan retakan permukaan kecil, dan penampilan keseluruhan menunjukkan gabungan harmonis antara atribut asli biji dan rasa yang dihasilkan oleh proses pemanggangan.</string>
+    <string name="medium_flavour">Biji kopi robusta kematangan medium menemukan keseimbangan antara rasa asli biji dan efek transformasi pemanggangan. Anda dapat mengharapkan profil rasa yang lebih halus dan berbentuk bulat dibandingkan dengan kematangan yang lebih terang. Keasaman menjadi lebih tenang, memberi jalan pada perpaduan manis karamel yang menyenangkan dan tubuh sedang. Nuansa biji kematangan menjadi lebih menonjol, sering disertai dengan sentuhan cokelat, kakao, dan mungkin bahkan sedikit kepedasan. Hasilnya adalah cangkir yang harmonis dengan kedalaman dan kompleksitas yang memuaskan.</string>
+    <string name="medium_aroma">Biji kopi robusta kematangan medium menampilkan aroma yang seimbang dan mengundang. Aroma menjadi lebih hangat dan kaya, dengan munculnya kelembutan manis karamel. Anda mungkin mendeteksi catatan gula cokelat, toffee, atau bahkan sedikit madu. Aroma sering disertai oleh kehadiran biji kematangan yang nyaman, memberikan perasaan kedalaman dan kompleksitas. Sentuhan lembut kakao atau cokelat juga mungkin ada, menambahkan pada sifat mengundang cangkir.</string>
+
+    <!-- Kematangan Gelap -->
+    <string name="dark_description">Kopi Robusta kematangan gelap menawarkan perjalanan sensorik yang berani dan intens yang merayakan karakteristik tangguh varietas kopi ini. Terutama ditanam di daerah tropis, biji-bijian ini mengalami proses pemanggangan gelap yang terampil, menghasilkan profil rasa yang kompleks dan kuat. Cangkir ini memiliki keasaman rendah, dipadukan dengan tubuh yang penuh dan lembut yang melapisi lidah dengan kehadiran yang kaya dan abadi. Nuansa cokelat gelap bercampur dengan nuansa bumi dan kayu yang mencolok, menciptakan aroma yang dalam dan berasap yang melingkupi indra. Dengan pahit yang meningkat dan daya tahan yang unik terhadap pemanggangan intens, kopi robusta kematangan gelap menyajikan pengalaman yang tangguh dan memanjakan yang sempurna untuk para penggemar yang mencari secangkir kopi berani dan berani.</string>
+    <string name="dark_temperature">225°C hingga 230°C</string>
+    <string name="dark_color">Biji kopi robusta kematangan gelap ditandai dengan warna cokelat gelap hingga hampir hitam. Permukaan biji-bijian sangat berkilau, memantulkan cahaya dengan kilau yang khas karena banyaknya minyak yang dilepaskan selama proses pemanggangan yang panjang. Biji-bijian bisa menunjukkan retakan permukaan yang lebih besar dan lebih menonjol, menyoroti perluasan yang terjadi saat mereka diroasting. Biji kematangan gelap memiliki penampilan yang intens dan agak kasar, dan rasa mereka sangat dipengaruhi oleh proses pemanggangan, menghasilkan nuansa kaya, berani, dan sering kali pahit manis.</string>
+    <string name="dark_flavour">Biji kopi robusta kematangan gelap mengalami karamelisasi yang substansial dan perkembangan rasa kematangan, menghasilkan karakteristik yang berani dan intens. Keasaman secara signifikan berkurang, digantikan oleh tekstur yang penuh dan kaya yang melapisi lidah. Nuansa pahit-manis cokelat gelap, kakao, dan terkadang asap menjadi sorotan utama. Kealamian bawaan biji robusta menjadi lebih menonjol, berkontribusi pada kompleksitas cangkir. Rasa yang berani, terkadang cenderung pada profil yang menyenangkan pahit atau berasap, memberikan pengalaman rasa yang kuat dan sering kali berani.</string>
+    <string name="dark_aroma">Biji kopi robusta kematangan gelap mengeluarkan aroma yang berani dan intens yang mencerminkan sifat biji yang diroasting dengan sangat gelap. Aromanya kaya dan kuat, dengan catatan cokelat gelap, kakao, dan terkadang bahkan sentuhan asap yang kuat. Aroma ini memiliki kualitas bumi, mengingatkan pada kayu atau tembakau. Nuansa pahit-manis menonjol, menambahkan perasaan kedalaman pada aroma. Mungkin ada nada yang berani dan sedikit pahit yang mengisyaratkan pengalaman rasa yang intens yang menanti dalam cangkir.</string>
+
+    <!--  App Tools  -->
+    <string name="tools_description">Deskripsi</string>
+    <string name="tools_close">Tutup</string>
+    <string name="tools_null_data">Data tidak memiliki isi</string>
+    <string name="tools_null_image">Gambar tidak ditemukan</string>
+    <string name="tools_lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+    <string name="tools_image_helper">com.robbyyehezkiel.robustaroasting.detection</string>
+
+    <!--  Dialog Info Upload Image  -->
+    <string name="tools_info_detection_title">
+        Anda belum memilih gambar apa pun untuk deteksi kematangan
+    </string>
+    <string name="tools_info_detection_content">
+        Anda dapat melakukan beberapa tindakan dengan langkah berikut : \n
+          1. Klik tombol metode untuk mengambil gambar untuk deteksi kematangan \n
+          2. Ambil gambar biji kopi Robusta \n
+          3. Konfirmasikan gambar\n
+          4. Dialog informasi untuk menampilkan deteksi hasil kematangan
+    </string>
+
+    <!--  Main Menu Card  -->
+    <string name="menuAppInfo">first menu</string>
+    <string name="menuRobusta">second menu</string>
+    <string name="menuQuiz">third menu</string>
+    <string name="menuSettings">fourth menu</string>
+
+    <!--  Main Menu Card  -->
+    <string-array name="data_id">
+        <item>@string/menuRobusta</item>
+        <item>@string/menuQuiz</item>
+        <item>@string/menuAppInfo</item>
+        <item>@string/menuSettings</item>
+    </string-array>
+
+    <string-array name="data_name">
+        <item>@string/menu_coffee_name</item>
+        <item>@string/menu_quiz</item>
+        <item>@string/menu_app_info</item>
+        <item>@string/menu_settings</item>
+    </string-array>
+
+    <integer-array name="data_photo">
+        <item>@drawable/icon_coffee</item>
+        <item>@drawable/icon_faq</item>
+        <item>@drawable/icon_phone</item>
+        <item>@drawable/icon_settings</item>
+    </integer-array>
+
+    <!--  Roast Title  -->
+    <string-array name="roast_title">
+        <item>@string/coffee_bean_light</item>
+        <item>@string/coffee_bean_medium</item>
+        <item>@string/coffee_bean_dark</item>
+    </string-array>
+
+    <!--  Roast Description  -->
+    <string-array name="roast_description">
+        <item>@string/light_description</item>
+        <item>@string/medium_description</item>
+        <item>@string/dark_description</item>
+    </string-array>
+
+    <!--  Roast Photo  -->
+    <integer-array name="roast_photo">
+        <item>@drawable/image_robusta_light</item>
+        <item>@drawable/image_robusta_medium</item>
+        <item>@drawable/image_robusta_dark</item>
+    </integer-array>
+
+    <!--  Roast Temperature  -->
+    <string-array name="roast_temperature">
+        <item>@string/light_temperature</item>
+        <item>@string/medium_temperature</item>
+        <item>@string/dark_temperature</item>
+    </string-array>
+
+    <!--  Roast Color  -->
+    <string-array name="roast_color">
+        <item>@string/light_color</item>
+        <item>@string/medium_color</item>
+        <item>@string/dark_color</item>
+    </string-array>
+
+    <!--  Roast Flavour  -->
+    <string-array name="roast_flavour">
+        <item>@string/light_flavour</item>
+        <item>@string/medium_flavour</item>
+        <item>@string/dark_flavour</item>
+    </string-array>
+
+    <!--  Roast Aroma  -->
+    <string-array name="roast_aroma">
+        <item>@string/light_aroma</item>
+        <item>@string/medium_aroma</item>
+        <item>@string/dark_aroma</item>
+    </string-array>
+
+</resources>
