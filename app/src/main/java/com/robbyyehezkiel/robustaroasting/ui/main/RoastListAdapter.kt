@@ -36,7 +36,7 @@ class RoastListAdapter(private val onItemClickCallback: (Roast, Int) -> Unit) :
 
         fun bind(roast: Roast) {
             binding.edListRoastTitle.text = roast.title
-            binding.edListRoastTemperature.text = roast.temperature
+            binding.edListRoastAgtron.text = roast.agtron
             binding.edListRoastPhoto.setImageResource(roast.photoResId)
         }
     }

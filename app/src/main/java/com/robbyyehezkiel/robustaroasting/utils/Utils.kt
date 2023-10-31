@@ -19,14 +19,11 @@ import android.provider.Settings
 import android.view.Gravity
 import android.view.View
 import android.view.WindowManager
-import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
-import com.bumptech.glide.Glide
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.snackbar.Snackbar
 import com.robbyyehezkiel.robustaroasting.R
-import com.robbyyehezkiel.robustaroasting.data.model.Photo
+import com.robbyyehezkiel.robustaroasting.data.model.Roast
 import java.io.ByteArrayOutputStream
 import java.io.File
 import java.io.FileOutputStream
@@ -158,4 +155,37 @@ fun openSettingPermission(context: Context) {
     intent.action = Settings.ACTION_APPLICATION_DETAILS_SETTINGS
     intent.data = Uri.fromParts("package", context.packageName, null)
     context.startActivity(intent)
+}
+
+fun getListRoast(context: Context): List<Roast> {
+    val dataTitle = context.resources.getStringArray(R.array.roast_title)
+    val dataDescription = context.resources.getStringArray(R.array.roast_description)
+    val dataTemperature = context.resources.getStringArray(R.array.roast_temperature)
+    val dataLogo = context.resources.obtainTypedArray(R.array.roast_photo)
+    val dataColor = context.resources.getStringArray(R.array.roast_color)
+    val dataFlavour = context.resources.getStringArray(R.array.roast_flavour)
+    val dataAroma = context.resources.getStringArray(R.array.roast_aroma)
+    val dataAgtron = context.resources.getStringArray(R.array.roast_agtron)
+    val dataTitlePopup = context.resources.getStringArray(R.array.roast_process_title)
+    val dataSubTitlePopup = context.resources.getStringArray(R.array.roast_process_subtitle)
+    val popupLogo = context.resources.obtainTypedArray(R.array.roast_photo_pop_up)
+
+    return dataTitle.indices.map { i ->
+        Roast(
+            dataTitle[i],
+            dataDescription[i],
+            dataTemperature[i],
+            dataLogo.getResourceId(i, -1),
+            dataColor[i],
+            dataFlavour[i],
+            dataAroma[i],
+            dataAgtron[i],
+            dataTitlePopup[i],
+            dataSubTitlePopup[i],
+            popupLogo.getResourceId(i, -1),
+        )
+    }.also {
+        dataLogo.recycle()
+        popupLogo.recycle()
+    }
 }

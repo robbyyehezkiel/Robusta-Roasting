@@ -7,13 +7,14 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.robbyyehezkiel.robustaroasting.R
 import com.robbyyehezkiel.robustaroasting.data.model.Menu
-import com.robbyyehezkiel.robustaroasting.data.model.Roast
 import com.robbyyehezkiel.robustaroasting.databinding.ActivityMainBinding
 import com.robbyyehezkiel.robustaroasting.ui.menu.app.AboutAppActivity
 import com.robbyyehezkiel.robustaroasting.ui.menu.coffee.DetailCoffeeActivity
 import com.robbyyehezkiel.robustaroasting.ui.menu.detection.DetectionResultActivity
 import com.robbyyehezkiel.robustaroasting.ui.menu.settings.SettingsActivity
+import com.robbyyehezkiel.robustaroasting.ui.roast.RoastingActivity
 import com.robbyyehezkiel.robustaroasting.ui.roasting.DetailRoastingActivity
+import com.robbyyehezkiel.robustaroasting.utils.getListRoast
 
 class MainActivity : AppCompatActivity() {
 
@@ -51,7 +52,7 @@ class MainActivity : AppCompatActivity() {
             adapter = roastListAdapter
         }
 
-        roastListAdapter.submitList(getListRoast())
+        roastListAdapter.submitList(getListRoast(this@MainActivity))
     }
 
     private fun setupMenuRecyclerView() {
@@ -77,7 +78,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun startQuizActivity() {
-        //
+        startActivity(Intent(this, RoastingActivity::class.java))
     }
 
     private fun startSettingsActivity() {
@@ -93,24 +94,4 @@ class MainActivity : AppCompatActivity() {
         }.also { dataPhoto.recycle() }
     }
 
-    private fun getListRoast(): List<Roast> {
-        val dataTitle = resources.getStringArray(R.array.roast_title)
-        val dataDescription = resources.getStringArray(R.array.roast_description)
-        val dataTemperature = resources.getStringArray(R.array.roast_temperature)
-        val dataLogo = resources.obtainTypedArray(R.array.roast_photo)
-        val dataColor = resources.getStringArray(R.array.roast_color)
-        val dataFlavour = resources.getStringArray(R.array.roast_flavour)
-        val dataAroma = resources.getStringArray(R.array.roast_aroma)
-        return dataTitle.indices.map { i ->
-            Roast(
-                dataTitle[i],
-                dataDescription[i],
-                dataTemperature[i],
-                dataLogo.getResourceId(i, -1),
-                dataColor[i],
-                dataFlavour[i],
-                dataAroma[i]
-            )
-        }.also { dataLogo.recycle() }
-    }
 }

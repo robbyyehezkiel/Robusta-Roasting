@@ -1,8 +1,10 @@
 package com.robbyyehezkiel.robustaroasting.ui.menu.detection
 
+import android.Manifest
 import android.app.Dialog
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.net.Uri
@@ -17,23 +19,24 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import android.Manifest
 import com.robbyyehezkiel.robustaroasting.R
+import com.robbyyehezkiel.robustaroasting.data.model.Roast
 import com.robbyyehezkiel.robustaroasting.databinding.ActivityDetectionResultBinding
 import com.robbyyehezkiel.robustaroasting.databinding.DialogResultBinding
 import com.robbyyehezkiel.robustaroasting.ml.MobileNetModelSeleksi
+import com.robbyyehezkiel.robustaroasting.ui.roasting.DetailRoastingActivity
 import com.robbyyehezkiel.robustaroasting.utils.createCustomTempFile
+import com.robbyyehezkiel.robustaroasting.utils.getListRoast
 import com.robbyyehezkiel.robustaroasting.utils.showDialogInfo
 import com.robbyyehezkiel.robustaroasting.utils.snackBarAction
 import org.tensorflow.lite.DataType
 import org.tensorflow.lite.support.image.TensorImage
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer
 import java.io.File
-import androidx.core.content.ContextCompat
-import android.content.pm.PackageManager
 
 class DetectionResultActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetectionResultBinding
@@ -48,12 +51,14 @@ class DetectionResultActivity : AppCompatActivity() {
     private var uri: Uri? = null
     private lateinit var currentPhotoPath: String
 
+    // Activity Result Launcher for selecting images
     private val getContent: ActivityResultLauncher<String> = registerForActivityResult(
         ActivityResultContracts.GetContent()
     ) { uri: Uri? ->
         handleImageSelection(uri)
     }
 
+    // Constants
     companion object {
         private val REQUIRED_PERMISSIONS = arrayOf(Manifest.permission.CAMERA)
         private const val REQUEST_CODE_PERMISSIONS = 10
@@ -64,6 +69,7 @@ class DetectionResultActivity : AppCompatActivity() {
         binding = ActivityDetectionResultBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Initialize UI elements
         initializeViews()
         setupActionBar()
         requestPermissionsIfNeeded()
@@ -82,6 +88,7 @@ class DetectionResultActivity : AppCompatActivity() {
         }
     }
 
+    // Request permissions if not granted
     private fun requestPermissionsIfNeeded() {
         if (!allPermissionsGranted()) {
             ActivityCompat.requestPermissions(
@@ -92,6 +99,7 @@ class DetectionResultActivity : AppCompatActivity() {
         }
     }
 
+    // Check if all required permissions are granted
     private fun allPermissionsGranted() = REQUIRED_PERMISSIONS.all {
         ContextCompat.checkSelfPermission(baseContext, it) == PackageManager.PERMISSION_GRANTED
     }
@@ -148,7 +156,6 @@ class DetectionResultActivity : AppCompatActivity() {
         }
     }
 
-
     private fun handleImageSelection(uri: Uri?) {
         try {
             @Suppress("DEPRECATION")
@@ -195,7 +202,6 @@ class DetectionResultActivity : AppCompatActivity() {
 
             outputResult = maxLabel  // Store the label with the highest output
 
-
             val classResults = mutableListOf<Pair<String, Double>>()
 
             for (i in outputFeature0.indices) {
@@ -238,12 +244,38 @@ class DetectionResultActivity : AppCompatActivity() {
         val recyclerView = popupDialog.findViewById<RecyclerView>(R.id.dialogRecyclerView)
         recyclerView.layoutManager = GridLayoutManager(context, 3)
         recyclerView.adapter = DetectionResultAdapter(resultData)
-
         roastResult = when (outputResult) {
-            "Light" -> getString(R.string.title_light)
-            "Medium" -> getString(R.string.title_medium)
-            "Dark" -> getString(R.string.title_dark)
-            else -> getString(R.string.tools_null_data)
+            "Light" -> {
+                popupBinding.edPopupHoverButton.text = getString(R.string.title_light)
+                getString(R.string.description_result_light)
+            }
+            "Medium" -> {
+                popupBinding.edPopupHoverButton.text = getString(R.string.title_medium)
+                getString(R.string.description_result_medium)
+            }
+            "Dark" -> {
+                popupBinding.edPopupHoverButton.text = getString(R.string.title_dark)
+                getString(R.string.description_result_dark)
+            }
+            else -> {
+                getString(R.string.tools_null_data)
+            }
+        }
+
+        // Set the OnClickListener for the button after the when expression
+        popupBinding.edPopupHoverButton.setOnClickListener {
+            val intentToDetail = Intent(this, DetailRoastingActivity::class.java)
+            val selectedRoast: Roast? = when (outputResult) {
+                "Light" -> getListRoast(this@DetectionResultActivity).getOrNull(0)
+                "Medium" -> getListRoast(this@DetectionResultActivity).getOrNull(1)
+                "Dark" -> getListRoast(this@DetectionResultActivity).getOrNull(2)
+                else -> null
+            }
+
+            selectedRoast?.let {
+                intentToDetail.putExtra("DATA", it)
+                startActivity(intentToDetail)
+            }
         }
 
         popupBinding.edPopupRoastInformation.text = roastResult

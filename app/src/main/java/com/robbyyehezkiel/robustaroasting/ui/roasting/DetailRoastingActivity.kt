@@ -1,7 +1,11 @@
 package com.robbyyehezkiel.robustaroasting.ui.roasting
 
+import android.app.Dialog
+import android.content.Intent
 import android.os.Bundle
+import android.view.Gravity
 import android.view.View
+import android.view.WindowManager
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.IntentCompat.getParcelableExtra
@@ -9,6 +13,8 @@ import com.bumptech.glide.Glide
 import com.robbyyehezkiel.robustaroasting.R
 import com.robbyyehezkiel.robustaroasting.data.model.Roast
 import com.robbyyehezkiel.robustaroasting.databinding.ActivityDetailRoastingBinding
+import com.robbyyehezkiel.robustaroasting.databinding.CustomDialogProcessBinding
+import com.robbyyehezkiel.robustaroasting.ui.menu.detection.DetectionResultActivity
 
 class DetailRoastingActivity : AppCompatActivity() {
 
@@ -28,12 +34,11 @@ class DetailRoastingActivity : AppCompatActivity() {
         val roastData = getParcelableExtra(intent, "DATA", Roast::class.java)
         if (roastData != null) {
             displayRoastData(roastData)
-
+            setupClickListeners(roastData)
         }
 
         initViews()
         setupToolbar()
-        setupClickListeners()
     }
 
     private fun setupToolbar() {
@@ -54,7 +59,7 @@ class DetailRoastingActivity : AppCompatActivity() {
             .centerCrop()
             .into(binding.roastPhoto)
         binding.roastTitle.text = roastData.title
-        binding.roastTemperature.text = roastData.temperature
+        binding.roastTemperature.text = roastData.agtron
         binding.roastDescription.text = roastData.description
         binding.roastColor.text = roastData.color
         binding.roastAroma.text = roastData.aroma
@@ -67,7 +72,7 @@ class DetailRoastingActivity : AppCompatActivity() {
         flavourDescriptionTextView = binding.roastFlavour
     }
 
-    private fun setupClickListeners() {
+    private fun setupClickListeners(roastData: Roast) {
         binding.roastColorTitle.setOnClickListener {
             toggleExpansionColor()
         }
@@ -78,6 +83,30 @@ class DetailRoastingActivity : AppCompatActivity() {
 
         binding.roastFlavourTitle.setOnClickListener {
             toggleExpansionFlavour()
+        }
+        binding.imageButton.setOnClickListener {
+            val intentToRoasting = Intent(this, DetectionResultActivity::class.java)
+            startActivity(intentToRoasting)
+        }
+        binding.buttonProcess.setOnClickListener {
+            val popupDialog = Dialog(this)
+            val popupBinding = CustomDialogProcessBinding.inflate(layoutInflater)
+            popupDialog.setContentView(popupBinding.root)
+
+            val window = popupDialog.window
+            window?.setLayout(
+                WindowManager.LayoutParams.MATCH_PARENT,
+                WindowManager.LayoutParams.WRAP_CONTENT
+            )
+            window?.setGravity(Gravity.CENTER)
+            popupBinding.popupLogo.setImageResource(roastData.photoPopUp)
+            popupBinding.roastPopUpTitle.text = roastData.titlePopup
+            popupBinding.roastPopUpDescription.text = roastData.subtitlePopup
+            popupBinding.closeButton.setOnClickListener {
+                popupDialog.dismiss()
+            }
+
+            popupDialog.show()
         }
     }
 

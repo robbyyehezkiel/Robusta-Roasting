@@ -27,6 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp" />
 
+
         <TextView
             android:id="@+id/ed_popup_roast_information"
             style="@style/BodyText"
@@ -37,15 +38,36 @@
             android:text="@string/tools_lorem_ipsum"
             android:textAlignment="center" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/ed_popup_close_button"
-            style="@style/ButtonPrimary"
-            android:layout_width="wrap_content"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_marginTop="16dp"
-            android:text="@string/tools_close"
-            app:backgroundTint="@null" />
+            android:layout_marginTop="16dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/ed_popup_hover_button"
+                style="@style/ButtonWhiteBorder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/icon_eye"
+                android:drawableTint="@color/frame2"
+                android:text="@string/tools_description"
+                app:backgroundTint="@null"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/ed_popup_close_button"
+                style="@style/ButtonPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tools_close"
+                app:backgroundTint="@null"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
 

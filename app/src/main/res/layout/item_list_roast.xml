@@ -39,7 +39,7 @@
                 android:text="@string/coffee_bean_medium" />
 
             <TextView
-                android:id="@+id/ed_list_roast_temperature"
+                android:id="@+id/ed_list_roast_agtron"
                 style="@style/BodyText"
                 android:text="@string/title_coffee_bean" />
         </LinearLayout>

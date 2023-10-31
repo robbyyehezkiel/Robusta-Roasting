@@ -34,6 +34,9 @@
         android:theme="@style/Theme.RobustaRoasting"
         tools:targetApi="31">
         <activity
+            android:name=".ui.roast.RoastingActivity"
+            android:theme="@style/AppTheme.WithActionBar" />
+        <activity
             android:name=".ui.roasting.DetailRoastingActivity"
             android:exported="false"
             android:theme="@style/AppTheme.WithActionBar" />

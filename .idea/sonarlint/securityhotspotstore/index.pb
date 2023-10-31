@@ -1,0 +1,27 @@
+
+s
+Capp/src/main/java/com/robbyyehezkiel/robustaroasting/utils/Utils.kt,b\b\bb6789ef999edd07f7295b6cfb7476e48aebb416
+ä
+Zapp/src/main/java/com/robbyyehezkiel/robustaroasting/ui/roasting/DetailRoastingActivity.kt,e\9\e99ba4b87b617c9a47617ce79854d7b2d499fd83
+â
+Yapp/src/main/java/com/robbyyehezkiel/robustaroasting/ui/menu/settings/SettingsActivity.kt,1\d\1d5259c079498ee51270dcc547e8447526ba7dac
+Ñ
+Tapp/src/main/java/com/robbyyehezkiel/robustaroasting/ui/menu/app/AboutAppActivity.kt,c\5\c517164d22f2a1e6d2224bb2122c1ac3b82651e0
+|
+Lapp/src/main/java/com/robbyyehezkiel/robustaroasting/ui/main/MainActivity.kt,8\a\8a535eb2c91fb44fda138c484c9703dfd25b6971
+x
+Happ/src/main/java/com/robbyyehezkiel/robustaroasting/utils/Parcelable.kt,8\1\81878033ecbe43fa284cb182c0a3308edbe9ce69
+ê
+`app/src/main/java/com/robbyyehezkiel/robustaroasting/ui/menu/detection/DetectionResultAdapter.kt,0\1\0154f3725c428adeccb77e408d01ad54b8ad8a17
+ë
+aapp/src/main/java/com/robbyyehezkiel/robustaroasting/ui/menu/detection/DetectionResultActivity.kt,9\9\9980fb0b8a848c2a277a670832112b2c8163ec7d
+Å
+Qapp/src/main/java/com/robbyyehezkiel/robustaroasting/ui/roast/RoastingActivity.kt,1\6\16953323233766fdf2debde8531f9fdd017a2703
+ã
+[app/src/main/java/com/robbyyehezkiel/robustaroasting/ui/menu/coffee/DetailCoffeeActivity.kt,3\2\32b2de8a4076870bf8f5d0de15766de855251914
+P
+ app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
+x
+Happ/src/main/java/com/robbyyehezkiel/robustaroasting/data/model/Roast.kt,d\d\dd8ea1b2a5cb94775b18a77e801a4fdcb308eda5
+Ä
+Papp/src/main/java/com/robbyyehezkiel/robustaroasting/ui/main/RoastListAdapter.kt,f\7\f7e59e251eaf951ee7991b8f8dc2197c816618dd

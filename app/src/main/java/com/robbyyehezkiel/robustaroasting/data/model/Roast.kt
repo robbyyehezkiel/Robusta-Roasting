@@ -12,5 +12,9 @@ data class Roast(
     @DrawableRes val photoResId: Int,
     val color: String,
     val flavour: String,
-    val aroma: String
+    val aroma: String,
+    val agtron: String,
+    val titlePopup: String,
+    val subtitlePopup: String,
+    @DrawableRes val photoPopUp: Int
 ) : Parcelable
