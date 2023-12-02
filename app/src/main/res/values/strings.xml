@@ -82,6 +82,17 @@
     <string name="light_flavour">Light roast robusta coffee beans offer a delicate and nuanced experience. The inherent flavors of the beans shine through, showcasing vibrant acidity and lively, fruity or floral notes. The taste is often bright and crisp, with a noticeable tartness that might remind you of citrus or berries. Undertones of toasted grains, nuts, and subtle earthiness can also be detected. The overall impression is one of subtlety, highlighting the unique characteristics of the bean\'s origin.</string>
     <string name="light_aroma">Light roast robusta coffee beans offer a fragrant and delicate aroma. The scent is often vibrant and lively, with prominent floral and fruity notes that evoke images of fresh blossoms and ripe berries. The aroma might also carry a hint of toasted grains or nuts, adding depth to the sensory experience. There\'s a sense of brightness and clarity in the aroma, reflecting the bean\'s origin and preserving the natural essences of the coffee.</string>
     <string name="light_process_roasting">The roasting temperature for light Robusta coffee ranges from 195°C to 205°C. Roasting time is also shorter, around 10 to 12 minutes. By carefully controlling temperature and time, Robusta coffee beans can be roasted more gently thereby maintaining their brighter acid characteristics and fresh fruity aromas and flavors, resulting in the desired light profile.</string>
+    <string name="light_coffee">
+        1. Pour-Over Coffee
+        \n2. Single-Origin Espresso
+        \n3. AeroPress Coffee
+        \n4. Cold Brew
+        \n5. Iced Coffee
+        \n6. Pour-over with Fruit Infusions
+        \n7. Coffee Lemonade
+        \n8. Single-Origin Drip Coffee
+        \n9/ Cascara Infusion
+    </string>
 
     <!--  Medium Roast -->
     <string name="medium_description">At this type of roasting level, there are several popular roasting names, namely Regular Roast, American Roast, City Roast and Breakfast Roast.</string>
@@ -91,6 +102,17 @@
     <string name="medium_flavour">Medium roast robusta coffee beans strike a balance between the original flavors of the bean and the transformative effects of roasting. You can expect a smoother and more rounded flavor profile compared to lighter roasts. The acidity becomes more subdued, giving way to a pleasant blend of caramelized sweetness and a moderate body. The nutty undertones become more pronounced, often accompanied by hints of chocolate, cocoa, and possibly even a touch of spiciness. The result is a harmonious cup with a satisfying depth and complexity.</string>
     <string name="medium_aroma">Medium roast robusta coffee beans showcase a well-rounded and inviting aroma. The scent becomes warmer and richer, with the emergence of caramelized sweetness. You might detect notes of brown sugar, toffee, or even a touch of honey. The aroma is often accompanied by the comforting presence of roasted nuts, providing a sense of depth and complexity. A subtle undertone of cocoa or chocolate can also be present, contributing to the inviting nature of the cup.</string>
     <string name="medium_process_roasting">The roasting temperature ranges from 205°C to 215°C, and the roasting time can take around 12 to 14 minutes. In this medium profile, Robusta coffee beans will display more balanced flavor characteristics between acidity and deeper flavors, with hints of chocolate and caramel. This creates a Robusta coffee with a stronger flavor than the light profile, but lacks the comfort of the dark profile.</string>
+    <string name="medium_coffee">
+        1. Drip Coffee
+        \n2. Cappuccino
+        \n3. Latte
+        \n4. Flat White
+        \n5. Americano
+        \n6. Pour-Over Coffee
+        \n7. Espresso-Based Drinks (e.g., Macchiato, Mocha)
+        \n8. French Press Coffee
+        \n9/ Affogato
+    </string>
 
     <!--  Dark Roast -->
     <string name="dark_description">At this type of roasting level, there are several popular roasting names, namely French Roast, Italian Roast, Espresso Roast, Continental Roast, New Orleans Roast, and Spanish Roast.</string>
@@ -100,6 +122,18 @@
     <string name="dark_flavour">Dark roast robusta coffee beans undergo substantial caramelization and the development of roasting flavors, resulting in bold and intense characteristics. The acidity is significantly diminished, replaced by a rich, full-bodied texture that coats the palate. Bittersweet notes of dark chocolate, cocoa, and sometimes smokiness take center stage. The inherent earthiness of robusta beans becomes more pronounced, contributing to the complexity of the cup. The flavors are robust, sometimes leaning toward a pleasantly bitter or smoky profile, providing a powerful and often bold taste experience.</string>
     <string name="dark_aroma">Dark roast robusta coffee beans exude a bold and intense aroma that reflects the deeply roasted nature of the beans. The scent is rich and powerful, with strong notes of dark chocolate, cocoa, and sometimes even a hint of smokiness. The aroma carries an earthy quality, reminiscent of wood or tobacco. The bittersweet notes are prominent, adding a sense of depth to the aroma. There might be a robust and slightly bitter undertone that hints at the intense flavor experience that awaits in the cup.</string>
     <string name="dark_process_roasting">The coffee roasting temperature should be increased to between 220°C to 230°C or even higher. Roasting time is usually longer, around 14 to 16 minutes or more. In this dark profile, Robusta coffee beans will produce a strong taste, with a more dominant bitter taste, and deeper taste characteristics such as chocolate, caramel, or even a more bitter and oily taste. The result is a Robusta coffee with a strong and flavorful profile that is suitable for coffee lovers who like bold and rich flavors.</string>
+    <string name="dark_coffee">
+    \n1. Espresso
+    \n2. Ristretto
+    \n3. Double Espresso (Doppio)
+    \n4. Americano (Dark Roast)
+    \n5. Café au Lait (Dark Roast)
+    \n6. Turkish Coffee
+    \n7. Black Coffee
+    \n8. Cold Brew (Dark Roast)
+    \n9. Irish Coffee
+    \n10. Café Cubano
+    </string>
 
     <!--  App Tools  -->
     <string name="tools_description">Description</string>
@@ -203,6 +237,13 @@
         <item>@string/light_agtron</item>
         <item>@string/medium_agtron</item>
         <item>@string/dark_agtron</item>
+    </string-array>
+
+    <!--  Roast Flavour  -->
+    <string-array name="roast_coffee">
+        <item>@string/light_coffee</item>
+        <item>@string/medium_coffee</item>
+        <item>@string/dark_coffee</item>
     </string-array>
 
     <!--  Roast Process Title  -->

@@ -166,6 +166,7 @@ fun getListRoast(context: Context): List<Roast> {
     val dataFlavour = context.resources.getStringArray(R.array.roast_flavour)
     val dataAroma = context.resources.getStringArray(R.array.roast_aroma)
     val dataAgtron = context.resources.getStringArray(R.array.roast_agtron)
+    val dataCoffee = context.resources.getStringArray(R.array.roast_coffee)
     val dataTitlePopup = context.resources.getStringArray(R.array.roast_process_title)
     val dataSubTitlePopup = context.resources.getStringArray(R.array.roast_process_subtitle)
     val popupLogo = context.resources.obtainTypedArray(R.array.roast_photo_pop_up)
@@ -180,6 +181,7 @@ fun getListRoast(context: Context): List<Roast> {
             dataFlavour[i],
             dataAroma[i],
             dataAgtron[i],
+            dataCoffee[i],
             dataTitlePopup[i],
             dataSubTitlePopup[i],
             popupLogo.getResourceId(i, -1),

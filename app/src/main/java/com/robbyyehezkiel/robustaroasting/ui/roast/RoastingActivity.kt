@@ -13,11 +13,6 @@ class RoastingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityRoastingBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.button.setOnClickListener {
-            val intentToDetection = Intent(this, DetectionResultActivity::class.java)
-            startActivity(intentToDetection)
-        }
-
         setupToolbar()
     }
 

@@ -25,3 +25,5 @@ x
 Happ/src/main/java/com/robbyyehezkiel/robustaroasting/data/model/Roast.kt,d\d\dd8ea1b2a5cb94775b18a77e801a4fdcb308eda5
 €
 Papp/src/main/java/com/robbyyehezkiel/robustaroasting/ui/main/RoastListAdapter.kt,f\7\f7e59e251eaf951ee7991b8f8dc2197c816618dd
+…
+Uapp/src/main/java/com/robbyyehezkiel/robustaroasting/data/model/FileUploadResponse.kt,4\7\479c86dadc0653e18d3c3f5d499498affa1caecf

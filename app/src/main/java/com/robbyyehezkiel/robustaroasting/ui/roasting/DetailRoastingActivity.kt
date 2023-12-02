@@ -85,8 +85,24 @@ class DetailRoastingActivity : AppCompatActivity() {
             toggleExpansionFlavour()
         }
         binding.imageButton.setOnClickListener {
-            val intentToRoasting = Intent(this, DetectionResultActivity::class.java)
-            startActivity(intentToRoasting)
+            val popupDialog = Dialog(this)
+            val popupBinding = CustomDialogProcessBinding.inflate(layoutInflater)
+            popupDialog.setContentView(popupBinding.root)
+
+            val window = popupDialog.window
+            window?.setLayout(
+                WindowManager.LayoutParams.MATCH_PARENT,
+                WindowManager.LayoutParams.WRAP_CONTENT
+            )
+            window?.setGravity(Gravity.CENTER)
+            popupBinding.popupLogo.setImageResource(roastData.photoPopUp)
+            popupBinding.roastPopUpTitle.text = roastData.titlePopup
+            popupBinding.roastPopUpDescription.text = roastData.coffee
+            popupBinding.closeButton.setOnClickListener {
+                popupDialog.dismiss()
+            }
+
+            popupDialog.show()
         }
         binding.buttonProcess.setOnClickListener {
             val popupDialog = Dialog(this)

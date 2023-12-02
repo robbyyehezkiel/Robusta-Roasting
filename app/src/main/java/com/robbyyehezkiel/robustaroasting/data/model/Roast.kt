@@ -14,6 +14,7 @@ data class Roast(
     val flavour: String,
     val aroma: String,
     val agtron: String,
+    val coffee: String,
     val titlePopup: String,
     val subtitlePopup: String,
     @DrawableRes val photoPopUp: Int
