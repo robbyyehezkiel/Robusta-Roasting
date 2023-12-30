@@ -209,7 +209,6 @@ class DetectionResultActivity : AppCompatActivity() {
                 classResults.add(Pair(labels[i], percentage))
             }
 
-            classResults.sortByDescending { it.second }
             showDialog(this, classResults)
             model.close()
         } else {
@@ -249,14 +248,17 @@ class DetectionResultActivity : AppCompatActivity() {
                 popupBinding.edPopupHoverButton.text = getString(R.string.title_light)
                 getString(R.string.description_result_light)
             }
+
             "Medium" -> {
                 popupBinding.edPopupHoverButton.text = getString(R.string.title_medium)
                 getString(R.string.description_result_medium)
             }
+
             "Dark" -> {
                 popupBinding.edPopupHoverButton.text = getString(R.string.title_dark)
                 getString(R.string.description_result_dark)
             }
+
             else -> {
                 getString(R.string.tools_null_data)
             }

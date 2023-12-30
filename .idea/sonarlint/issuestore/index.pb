@@ -9,8 +9,6 @@ Yapp/src/main/java/com/robbyyehezkiel/robustaroasting/ui/menu/settings/SettingsA
 Tapp/src/main/java/com/robbyyehezkiel/robustaroasting/ui/menu/app/AboutAppActivity.kt,c\5\c517164d22f2a1e6d2224bb2122c1ac3b82651e0
 |
 Lapp/src/main/java/com/robbyyehezkiel/robustaroasting/ui/main/MainActivity.kt,8\a\8a535eb2c91fb44fda138c484c9703dfd25b6971
-x
-Happ/src/main/java/com/robbyyehezkiel/robustaroasting/utils/Parcelable.kt,8\1\81878033ecbe43fa284cb182c0a3308edbe9ce69
 ê
 `app/src/main/java/com/robbyyehezkiel/robustaroasting/ui/menu/detection/DetectionResultAdapter.kt,0\1\0154f3725c428adeccb77e408d01ad54b8ad8a17
 ë
@@ -27,3 +25,13 @@ Happ/src/main/java/com/robbyyehezkiel/robustaroasting/data/model/Roast.kt,d\d\d
 Papp/src/main/java/com/robbyyehezkiel/robustaroasting/ui/main/RoastListAdapter.kt,f\7\f7e59e251eaf951ee7991b8f8dc2197c816618dd
 Ö
 Uapp/src/main/java/com/robbyyehezkiel/robustaroasting/data/model/FileUploadResponse.kt,4\7\479c86dadc0653e18d3c3f5d499498affa1caecf
+
+Oapp/src/main/java/com/robbyyehezkiel/robustaroasting/ui/main/MainMenuAdapter.kt,9\6\960194153b799871dec953d8a6dc00d4dbf4eb7e
+@
+app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
+Ü
+Vapp/src/main/java/com/robbyyehezkiel/robustaroasting/ui/splash/SplashScreenActivity.kt,5\3\53c9ab6e1d86350b8b360ce49d0a4497348e19e8
+w
+Gapp/src/main/java/com/robbyyehezkiel/robustaroasting/data/model/Menu.kt,4\d\4db411ae5b4354dfcf53d854f22ba50e9db31a4c
+x
+Happ/src/main/java/com/robbyyehezkiel/robustaroasting/data/model/Photo.kt,4\2\42746dc5d5e780365ac92006df33591617ce2310
